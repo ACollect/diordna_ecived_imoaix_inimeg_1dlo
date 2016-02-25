@@ -228,7 +228,9 @@ on boot
     chown system system /sys/module/cnss_common/parameters/bdwlan_file
 
 on fs
-    wait /dev/block/bootdevice
+    wait /dev/block/platform/soc/${ro.boot.bootdevice}
+    symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
+
     mount_all fstab.qcom
     swapon_all fstab.qcom
 
