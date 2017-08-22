@@ -320,10 +320,9 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    libqsap_sdk \
-    libQWiFiSoftApCfg \
     libwpa_client \
     wificond \
+    wifilogd \
     hostapd \
     readmac \
     wpa_supplicant \
